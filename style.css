@@ -1,0 +1,39 @@
+button{
+    height: 4rem;
+    width: 3rem;
+    border-radius: 30px;
+}
+input[type=button]{
+    border-radius: 20px;
+    width: 10rem;
+    height: 3rem;
+    margin: 3%;
+    background-color: rgb(144, 165, 228);
+}
+input[type=button]:hover{
+    background-color: rgb(192, 147, 147);
+}
+#retry-button{
+    text-align: center;
+}
+#retry-div{
+    display: none;
+    text-align: center;
+}
+.game-rules{
+    text-align: left;
+    width: 40%;
+}
+#retryGame{
+    width: 100%;
+    height: 40rem;
+    display: none;
+}
+
+
+@media only screen and (max-width: 636px) {
+    .game-rules{
+        text-align: left;
+        width: 80%;
+    }
+}
