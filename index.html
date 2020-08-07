@@ -50,14 +50,17 @@
     </form>
     <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?widget=true&amp;headers=false"></iframe>    <input type="button" id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" value="Start Game"> -->
     <button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" >Start Game</button>
-    <button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="window.location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?gid=0&single=true'" >Show Result</button>
+    <button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="window.location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQyfcngHRA1ssTeNJblWl0NfHpFMvoc5QmKIArYYHNfACb5THoF-wJ6HgKDCyflDDcNLWIP9uWjCthB/pubhtml?gid=0&single=true'" >Show Result</button>
     
 </div>
 <h3 id="scoreDisplay"></h3>
 <br>
-<div id="retryGame"  onclick="scoreSubmit()">
-    <h3>Click anywhere on the screen to SUBMIT your score</h3>
+<div id="retryGame">
 <img id="loseImage" class="loseOrWin" src="lose.jpg" alt="lose">
+<button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="window.location.href='index.html'" >Retry Game</button>
+<br>
+<h4>Click here to submit your Score</h4>
+<button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="scoreSubmit()" >Submit Score</button>
 </div>
 </center>
 
