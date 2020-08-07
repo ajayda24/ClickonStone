@@ -1,19 +1,14 @@
-
 button{
     height: 4rem;
     width: 3rem;
     border-radius: 30px;
 }
-input[type=button]{
+#start-button{
     border-radius: 20px;
-    width: 10rem;
-    height: 3rem;
-    margin: 3%;
-    background-color: rgb(144, 165, 228);
+    margin-top: 2%;
+    width: 20%;
 }
-input[type=button]:hover{
-    background-color: rgb(192, 147, 147);
-}
+
 #retry-button{
     text-align: center;
 }
@@ -43,9 +38,46 @@ input[type=button]:hover{
 .margin{
     margin-top: 5%;
 }
+
+/* ---------------------- */
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  .top {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .middle{
+      border-radius: 0;
+      margin-bottom: -1px;
+      
+  }
+
 @media only screen and (max-width: 636px) {
     .game-rules{
         text-align: left;
         width: 80%;
+    }
+    #start-button{
+        border-radius: 20px;
+        margin-top: 2%;
+        width: 70%;
     }
 }
