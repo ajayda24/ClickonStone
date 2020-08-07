@@ -95,7 +95,7 @@ function buttonGreen(){
 function scoreSubmit(){
     document.getElementById("scoreForm").value = score;
     $.ajax({
-        url:"https://script.google.com/macros/s/AKfycbx35QtCB0TwxxdZ4hnPAoBNaa959LccIYN7WNrcsA/exec",
+        url:"https://script.google.com/macros/s/AKfycbxxBmocWi2977pbfU23fiBgdiMB-I88kc2anmHiIA/exec",
         data:$("#submit-form").serialize(),
         method:"post",
         success:function (response){
