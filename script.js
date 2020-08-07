@@ -1,5 +1,5 @@
-// document.getElementById("scoreForm").style.visibility= "hidden";
-document.getElementById("scoreForm").style.display = "none";
+document.getElementById("scoreForm").style.visibility= "hidden";
+// document.getElementById("scoreForm").style.display = "none";
 var score = 0;
 var x;
 var randomButton = Math.floor(Math.random()*1)+50;
