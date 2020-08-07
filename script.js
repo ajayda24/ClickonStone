@@ -1,5 +1,4 @@
 document.getElementById("scoreForm").style.visibility= "hidden";
-// document.getElementById("scoreForm").style.display = "none";
 var score = 0;
 var x;
 var randomButton = Math.floor(Math.random()*1)+50;
@@ -46,27 +45,7 @@ function Button(){
         document.getElementById("retryGame").style.display = "block";
         window.scrollTo(0, 0); 
         // -------------------------------------
-        // document.getElementById("scoreForm").style.visibility= "visible";
-        // document.getElementById("scoreForm").value = score;
-        // document.getElementById("submit-form").submit();
-    // $("#submit-form").submit((e)=>{
-        // e.preventDefault()
-        
-        // $.ajax({
-        //     url:"https://script.google.com/macros/s/AKfycbycApfeTtLrfUAqtFhgWC5cwJZYTVpGpk6l5oHBjAd7f5Zu2BM/exec",
-        //     data:$("#submit-form").serialize(),
-        //     method:"post",
-        //     success:function (response){
-        //         // alert("Form submitted successfully")
-        //         window.location.reload();
-        //         window.location.href="success.html";
-        //     },
-        //     error:function (err){
-        //       window.location.href="failure.html";
-  
-        //     }
-        // })
-    // })
+
     // -----------------------------------
               
     });
@@ -107,43 +86,21 @@ function buttonGreen(){
             document.getElementById("retryGame").style.display = "block";
             window.scrollTo(0, 0);
             // -------------------------------------
-            // document.getElementById("scoreForm").style.visibility= "visible";
-            // document.getElementById("scoreForm").value = score;
-            // document.getElementById("submit-form").submit();
-        // $("#submit-form").submit((e)=>{
-            // e.preventDefault()
-            
-            // $.ajax({
-            //     url:"https://script.google.com/macros/s/AKfycbycApfeTtLrfUAqtFhgWC5cwJZYTVpGpk6l5oHBjAd7f5Zu2BM/exec",
-            //     data:$("#submit-form").serialize(),
-            //     method:"post",
-            //     success:function (response){
-            //         // alert("Form submitted successfully")
-            //         window.location.reload();
-            //         window.location.href="success.html";
-            //     },
-            //     error:function (err){
-            //       window.location.href="failure.html";
-      
-            //     }
-            // })
-        // })
+       
         // -----------------------------------
         }
     });
 }
 
 function scoreSubmit(){
-    document.getElementById("scoreForm").style.visibility= "visible";
     document.getElementById("scoreForm").value = score;
     $.ajax({
-        url:"https://script.google.com/macros/s/AKfycbycApfeTtLrfUAqtFhgWC5cwJZYTVpGpk6l5oHBjAd7f5Zu2BM/exec",
+        url:"https://script.google.com/macros/s/AKfycbzxURCnBuJfHL37TCSo64jHHBkyeuS5jaonIlRYdzVpJdzhzgDH/exec",
         data:$("#submit-form").serialize(),
         method:"post",
         success:function (response){
             // alert("Form submitted successfully")
             window.location.reload();
-            // window.location.href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?gid=0&single=true";
         },
         error:function (err){
           window.location.href="failure.html";
