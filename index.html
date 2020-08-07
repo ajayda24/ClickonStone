@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClickonStone</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    
+    
 </head>
 <body>
     
@@ -14,6 +25,7 @@
 <center>
     <div id="game-head">
     <h1>Sharpen your Eyes</h1>
+    <h5>Developed by Ajay Daniel Trevor</h5> 
     <h4>Game Rules : <br>
         <div class="game-rules">
             <br>
@@ -27,58 +39,27 @@
     <div id="entry">
         
         
-    <h5>Developed by Ajay Daniel Trevor</h5> 
-    <input id="start-button" type="button" onclick="startButton()" value="Start Game"> 
+
+    
+
+    <form id="submit-form" class="form-signin" action="/" method="POST">
+    <label for="inputFirstName" class="sr-only">Name</label>
+    <input type="text" name="Name" id="inputFirstName" class="form-control top" placeholder="Enter your Name" required autofocus>
+    <input type="number" name="Score" id="scoreForm" class="form-control top" placeholder="Enter your Mark">
+    </form>
+    <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?widget=true&amp;headers=false"></iframe>    <input type="button" id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" value="Start Game"> -->
+    <button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" >Start Game</button>
+    <button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="window.location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?gid=0&single=true'" >Show Result</button>
+    
 </div>
 <h3 id="scoreDisplay"></h3>
 <br>
-<div id="retryGame"  onclick="window.location.href=window.location.href">
-    <h3>Click anywhere on the screen to retry</h3>
+<div id="retryGame"  onclick="scoreSubmit()">
+    <h3>Click anywhere on the screen to SUBMIT your score</h3>
 <img id="loseImage" class="loseOrWin" src="lose.jpg" alt="lose">
 </div>
 </center>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
