@@ -43,11 +43,7 @@
 
     
 
-    <form id="submit-form" class="form-signin" action="/" method="POST">
-    <label for="inputFirstName" class="sr-only">Name</label>
-    <input type="text" name="Name" id="inputFirstName" class="form-control top" placeholder="Enter your Name to Submit Score" required autofocus>
-    <input type="number" name="Score" id="scoreForm" class="form-control top" placeholder="Enter your Mark">
-    </form>
+    
     <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?widget=true&amp;headers=false"></iframe>    <input type="button" id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" value="Start Game"> -->
     <button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" >Start Game</button>
     <button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="window.location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vSFkjUAHxHS3rRzolc0K9xDG7f1EZBA2K317N_BMppYTnxeCCaGj7MzvVWJYU9GBRIJ7a9NjBWRN-vF/pubhtml?gid=0&single=true'" >Show Result</button>
@@ -59,7 +55,11 @@
 <img id="loseImage" class="loseOrWin" src="lose.jpg" alt="lose">
 <button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="window.location.href='index.html'" >Retry Game</button>
 <br>
-<h4>Click here to submit your Score</h4>
+<form id="submit-form" class="form-signin" action="/" method="POST">
+    <label for="inputFirstName" class="sr-only">Name</label>
+    <input type="text" name="Name" id="inputFirstName" class="form-control top" placeholder="Enter your Name to Submit Score" required autofocus autocomplete="off">
+    <input type="number" name="Score" id="scoreForm" class="form-control top" placeholder="Enter your Mark">
+    </form>
 <button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="scoreSubmit()" >Submit Score</button>
 </div>
 </center>
