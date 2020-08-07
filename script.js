@@ -1,4 +1,4 @@
-document.getElementById("scoreForm").style.visibility= "hidden";
+document.getElementById("scoreForm").style.display= "none";
 var score = 0;
 var x;
 var randomButton = Math.floor(Math.random()*1)+50;
@@ -32,6 +32,7 @@ function Button(){
         });    
     }
     $(".clickWhite").click(function() {
+        loseSound();
         $(this).css("background-color","Red");
         // alert("Loose...........");
         clearInterval(intervalLoop);
@@ -64,16 +65,17 @@ function buttonGreen(){
         btnGreen.setAttribute("class","blueColor");
         score = score+1;
         document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
-        
+        winSound(this);
         
 
     });
     window.addEventListener('scroll', function() {
         var element = document.querySelector('.clickBlue');
         var position = element.getBoundingClientRect();
-    
         // checking whether fully visible
         if(position.top <= 0 && position.bottom <= window.innerHeight) {
+            loseSound();
+            
             console.log('not visible');
             clearInterval(intervalLoop);
             clearInterval(intervalLoop2);
@@ -109,7 +111,14 @@ function scoreSubmit(){
     })
 }
 
+function winSound(win){
+    var greenSound = new Audio("green.mp3");
+    greenSound.play();
+}
 
+function loseSound(){
+    var whiteSound = new Audio("wrong.mp3");
+    whiteSound.play();
+}
 
     
-
