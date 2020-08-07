@@ -74,7 +74,7 @@ function buttonGreen(){
         var position = element.getBoundingClientRect();
         // checking whether fully visible
         if(position.top <= 0 && position.bottom <= window.innerHeight) {
-            loseSound();
+            
             
             console.log('not visible');
             clearInterval(intervalLoop);
