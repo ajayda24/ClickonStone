@@ -75,7 +75,6 @@ function buttonGreen(){
         // checking whether fully visible
         if(position.top <= 0 && position.bottom <= window.innerHeight) {
             
-            
             console.log('not visible');
             clearInterval(intervalLoop);
             clearInterval(intervalLoop2);
@@ -121,4 +120,7 @@ function loseSound(){
     whiteSound.play();
 }
 
-    
+function themeToggle(){
+    var element = document.body;
+   element.classList.toggle("dark-mode");
+}    
