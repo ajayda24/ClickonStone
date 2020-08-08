@@ -12,7 +12,15 @@ button{
     margin-top: 2%;
     width: 20%;
 }
-
+#theme-switch{
+    border-radius: 20px;
+    margin-top: 2%;
+    width: 20%;
+}
+.dark-mode {
+    background-color: aliceblue;
+    color: #222831;
+  }
 #retry-button{
     text-align: center;
 }
@@ -80,6 +88,11 @@ button{
         width: 100%;
     }
     #start-button{
+        border-radius: 20px;
+        margin-top: 2%;
+        width: 70%;
+    }
+    #theme-switch{
         border-radius: 20px;
         margin-top: 2%;
         width: 70%;
