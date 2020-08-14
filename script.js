@@ -30,8 +30,8 @@ function startButton(){
     document.getElementById("scoreDisplay").innerHTML = "Score : " + score; 
     document.getElementById("loseImage").style.display = "none";
     document.getElementById("entry").style.display = "none";
-     intervalLoop = setInterval(Button, randomButton);
-     intervalLoop2 = setInterval(buttonGreen, randomGreenButton);
+     intervalLoop = setInterval(Button, whiteSpeed);
+     intervalLoop2 = setInterval(buttonGreen, greenSpeed);
      $("h1").setAttribute("class","margin");
 }
 
