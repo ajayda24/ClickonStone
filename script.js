@@ -16,8 +16,8 @@ function startButton(){
     document.getElementById("scoreDisplay").innerHTML = "Score : " + score; 
     document.getElementById("loseImage").style.display = "none";
     document.getElementById("entry").style.display = "none";
-     intervalLoop = setInterval(Button, whiteSpeed);
-     intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+     intervalLoop = setInterval(Button, 100);
+     intervalLoop2 = setInterval(buttonGreen, 78);
      $("h1").setAttribute("class","margin");
 }
 
@@ -68,41 +68,6 @@ function buttonGreen(){
         score = score+1;
         document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
         winSound(this);
-        if(score < 10){
-            whiteSpeed = 550;
-            greenSpeed = 500;
-        } else if(score > 20){
-            whiteSpeed = 500;
-            greenSpeed = 450;
-        } else if(score > 30){
-            whiteSpeed = 450;
-            greenSpeed = 400;
-        } else if(score > 50){
-            whiteSpeed = 400;
-            greenSpeed = 350;
-        } else if(score > 70){
-            whiteSpeed = 350;
-            greenSpeed = 300;
-        } else if(score > 90){
-            whiteSpeed = 300;
-            greenSpeed = 250;
-        } else if(score > 110){
-            whiteSpeed = 250;
-            greenSpeed = 200;
-        } else if(score > 130){
-            whiteSpeed = 200;
-            greenSpeed = 150;
-        } else if(score > 150){
-            whiteSpeed = 150;
-            greenSpeed = 100;
-        } else if(score > 170){
-            whiteSpeed = 100;
-            greenSpeed = 50;
-        } else if(score > 200){
-            whiteSpeed = 50;
-            greenSpeed = 25;
-        }
-
     });
     window.addEventListener('scroll', function() {
         var element = document.querySelector('.clickBlue');
