@@ -3,11 +3,27 @@ var score = 0;
 var x;
 var randomButton = Math.floor(Math.random()*1)+50;
 var randomGreenButton = Math.floor(Math.random()*1)+79;
+var whiteSpeed = 200;
+var greenSpeed = 150;
 var intervalLoop;
 var intervalLoop2;
 var div = document.createElement("div");
 document.body.appendChild(div);
 div.setAttribute("class","divClass");
+
+if(score > 100){
+    whiteSpeed = 150;
+    greenSpeed = 125;
+} else if(score > 200){
+    whiteSpeed = 125;
+    greenSpeed = 100;
+} else if(score > 300){
+    whiteSpeed = 100;
+    greenSpeed = 75;
+} else if(score > 400){
+    whiteSpeed = 50;
+    greenSpeed = 35;
+}
 
 function startButton(){
 
