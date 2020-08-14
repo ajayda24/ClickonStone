@@ -1,8 +1,8 @@
 document.getElementById("scoreForm").style.display= "none";
 var score = 0;
 var x;
-var whiteSpeed = 600;
-var greenSpeed = 530;
+var whiteSpeed = 500;
+var greenSpeed = 467;
 var intervalLoop;
 var intervalLoop2;
 var div = document.createElement("div");
@@ -16,9 +16,10 @@ function startButton(){
     document.getElementById("scoreDisplay").innerHTML = "Score : " + score; 
     document.getElementById("loseImage").style.display = "none";
     document.getElementById("entry").style.display = "none";
-     intervalLoop = setInterval(Button, 100);
-     intervalLoop2 = setInterval(buttonGreen, 78);
-     $("h1").setAttribute("class","margin");
+    
+    intervalLoop = setInterval(Button, whiteSpeed);
+    intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    $("h1").setAttribute("class","margin");
 }
 
 function Button(){
@@ -68,7 +69,84 @@ function buttonGreen(){
         score = score+1;
         document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
         winSound(this);
+
+
     });
+
+    if(score > 10){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 400;
+        greenSpeed = 350;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 20){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 350;
+        greenSpeed = 300;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 40){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 300;
+        greenSpeed = 250;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 70){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 250;
+        greenSpeed = 200;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 90){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 200;
+        greenSpeed = 150;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 120){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 150;
+        greenSpeed = 100;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 150){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 100;
+        greenSpeed = 50;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 180){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 75;
+        greenSpeed = 35;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 200){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 50;
+        greenSpeed = 25;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+
+
     window.addEventListener('scroll', function() {
         var element = document.querySelector('.clickBlue');
         var position = element.getBoundingClientRect();
