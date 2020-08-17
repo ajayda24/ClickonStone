@@ -92,13 +92,13 @@ function buttonGreen(){
     var btnGreen = document.createElement("button");
     var btnBlue;
     div.appendChild(btnGreen);
-    btnGreen.setAttribute("style","background-color: #4CAF50");
+    btnGreen.setAttribute("style","background-color: #00b33c");
     btnGreen.setAttribute("class","clickBlue");
 
     
     $(btnGreen).click(function() {
         
-        btnBlue = $(this).css("background-color","Blue");
+        btnBlue = $(this).css("background-color","#0073e6");
         btnGreen.setAttribute("class","blueColor");
         score = score+1;
         document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
@@ -227,13 +227,13 @@ function buttonGold(){
     var btnGold = document.createElement("button");
     var btnGoldBright;
     div.appendChild(btnGold);
-    btnGold.setAttribute("style","background-color: #fff5b3");
+    btnGold.setAttribute("style","background-color: #ffdf00");
     btnGold.setAttribute("class","clickGold");
 
     
     $(btnGold).click(function() {
         
-        btnGoldBright = $(this).css("background-color","#ffdf00");
+        btnGoldBright = $(this).css("background-color","#ff1a1a");
         btnGold.setAttribute("class","goldColor");
         score = score+10;
         document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
@@ -289,6 +289,7 @@ function themeToggle(){
 function showInstructions(){
     $("#game-rules-id").fadeToggle();
     // document.getElementById("game-rules-id").style.display = "block";
+    document.getElementById("instruction-video").play();
 }
 
 
