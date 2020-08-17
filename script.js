@@ -3,15 +3,47 @@ var score = 0;
 var x;
 var whiteSpeed = 500;
 var greenSpeed = 467;
+var goldSpeed = 5000;
 var intervalLoop;
 var intervalLoop2;
+var intervalLoop3;
 var div = document.createElement("div");
 document.body.appendChild(div);
 div.setAttribute("class","divClass");
+var themeButton = true;
 
+// for volume button //
+// ---------------------------------------------------------------------
+var bgsound = new Audio("bgsound.mp3");
+var volumeButton = document.getElementById("volume-img");
+var volumeCheck = true;
+
+$(volumeButton).click(function(){
+
+if(volumeCheck === true){
+    volumeCheck = false;
+    volumeButton.setAttribute("src","mute.png");
+    
+} else {
+
+    volumeCheck = true;   
+    volumeButton.setAttribute("src","volume.png");
+}
+});
+//------------------------------------------------------------------------------
+
+// Start game //
 
 
 function startButton(){
+    bgsound.volume = 0.1;
+    if(volumeCheck === false){
+        bgsound.pause();
+    } else {
+        bgsound.play();
+    }
+    
+    
 
     document.getElementById("scoreDisplay").innerHTML = "Score : " + score; 
     document.getElementById("loseImage").style.display = "none";
@@ -19,6 +51,7 @@ function startButton(){
     
     intervalLoop = setInterval(Button, whiteSpeed);
     intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    intervalLoop3 = setInterval(buttonGold, goldSpeed);
     $("h1").setAttribute("class","margin");
 }
 
@@ -36,6 +69,7 @@ function Button(){
     }
     $(".clickWhite").click(function() {
         loseSound();
+        bgsound.pause();
         $(this).css("background-color","Red");
         // alert("Loose...........");
         clearInterval(intervalLoop);
@@ -72,24 +106,23 @@ function buttonGreen(){
 
 
     });
-
     if(score > 10){
         // clearInterval(intervalLoop);
         clearInterval(intervalLoop2);
         whiteSpeed = 400;
-        greenSpeed = 350;
+        greenSpeed = 450;
         // intervalLoop = setInterval(Button, whiteSpeed);
         intervalLoop2 = setInterval(buttonGreen, greenSpeed);
     }
     if(score > 20){
         // clearInterval(intervalLoop);
         clearInterval(intervalLoop2);
-        whiteSpeed = 350;
-        greenSpeed = 300;
+        whiteSpeed = 300;
+        greenSpeed = 350;
         // intervalLoop = setInterval(Button, whiteSpeed);
         intervalLoop2 = setInterval(buttonGreen, greenSpeed);
     }
-    if(score > 40){
+    if(score > 30){
         // clearInterval(intervalLoop);
         clearInterval(intervalLoop2);
         whiteSpeed = 300;
@@ -97,18 +130,34 @@ function buttonGreen(){
         // intervalLoop = setInterval(Button, whiteSpeed);
         intervalLoop2 = setInterval(buttonGreen, greenSpeed);
     }
-    if(score > 70){
+    if(score > 50){
         // clearInterval(intervalLoop);
         clearInterval(intervalLoop2);
         whiteSpeed = 250;
+        greenSpeed = 225;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 60){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 225;
         greenSpeed = 200;
+        // intervalLoop = setInterval(Button, whiteSpeed);
+        intervalLoop2 = setInterval(buttonGreen, greenSpeed);
+    }
+    if(score > 70){
+        // clearInterval(intervalLoop);
+        clearInterval(intervalLoop2);
+        whiteSpeed = 200;
+        greenSpeed = 175;
         // intervalLoop = setInterval(Button, whiteSpeed);
         intervalLoop2 = setInterval(buttonGreen, greenSpeed);
     }
     if(score > 90){
         // clearInterval(intervalLoop);
         clearInterval(intervalLoop2);
-        whiteSpeed = 200;
+        whiteSpeed = 175;
         greenSpeed = 150;
         // intervalLoop = setInterval(Button, whiteSpeed);
         intervalLoop2 = setInterval(buttonGreen, greenSpeed);
@@ -164,10 +213,33 @@ function buttonGreen(){
             document.getElementById("loseImage").style.display = "block";
             document.getElementById("retryGame").style.display = "block";
             window.scrollTo(0, 0);
+            bgsound.pause();
             // -------------------------------------
        
         // -----------------------------------
         }
+
+        
+    });
+}
+
+function buttonGold(){
+    var btnGold = document.createElement("button");
+    var btnGoldBright;
+    div.appendChild(btnGold);
+    btnGold.setAttribute("style","background-color: #fff5b3");
+    btnGold.setAttribute("class","clickGold");
+
+    
+    $(btnGold).click(function() {
+        
+        btnGoldBright = $(this).css("background-color","#ffdf00");
+        btnGold.setAttribute("class","goldColor");
+        score = score+10;
+        document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
+        winSound(this);
+
+
     });
 }
 
@@ -189,16 +261,37 @@ function scoreSubmit(){
 }
 
 function winSound(win){
-    var greenSound = new Audio("green.mp3");
+    var greenSound = new Audio("win.mp3");
     greenSound.play();
 }
 
 function loseSound(){
-    var whiteSound = new Audio("wrong.mp3");
+    var whiteSound = new Audio("fail.mp3");
     whiteSound.play();
 }
 
 function themeToggle(){
     var element = document.body;
    element.classList.toggle("dark-mode");
-}    
+   
+   if(themeButton === true){
+    themeButton = false;
+    $("#theme-button").addClass("btn-dark");
+    
+   } else {
+    themeButton = true;
+    $("#theme-button").removeClass("btn-dark");
+    
+   }
+   
+}   
+
+function showInstructions(){
+    $("#game-rules-id").fadeToggle();
+    // document.getElementById("game-rules-id").style.display = "block";
+}
+
+
+
+
+
