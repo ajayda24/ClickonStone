@@ -113,7 +113,9 @@ button{
     #start-button{
         border-radius: 20px;
         margin-top: 2%;
-        width: 70%;
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
     #theme-switch{
         border-radius: 20px;
@@ -123,7 +125,7 @@ button{
     #instructions-button{
         border-radius: 20px;
         margin-top: 2%;
-        width: 70%;
+        width: 50%;
     }
     #group-button{
         width: 40%;
