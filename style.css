@@ -73,6 +73,17 @@ button{
 #loseImage{
     width: 18%;
 }
+table{
+    width: 200px;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid rgb(255, 255, 255);
+}
+caption{
+      text-align: center;
+      color: aliceblue;
+}
 
 /* ---------------------- */
 .form-signin {
