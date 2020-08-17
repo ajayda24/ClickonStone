@@ -34,7 +34,7 @@ button{
     color: #222831;
   }
 #group-button{
-    width: 10%;
+    width: 12%;
     border-radius: 20px;
 }
 #retry-button{
@@ -126,7 +126,7 @@ button{
         width: 70%;
     }
     #group-button{
-        width: 30%;
+        width: 40%;
         border-radius: 20px;
     }
     #loseImage{
