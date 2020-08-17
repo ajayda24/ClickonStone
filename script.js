@@ -233,7 +233,7 @@ function buttonGold(){
     
     $(btnGold).click(function() {
         
-        btnGoldBright = $(this).css("background-color","#ff1a1a");
+        btnGoldBright = $(this).css("background-color","#ffffff");
         btnGold.setAttribute("class","goldColor");
         score = score+10;
         document.getElementById("scoreDisplay").innerHTML = "Score : " + score;
