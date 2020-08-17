@@ -20,21 +20,15 @@
 </head>
 <body>
     
-        
+    
     
 <center>
     <div id="game-head">
     <h1>Sharpen your Eyes</h1>
     <h5>Developed by Ajay Daniel Trevor</h5> 
     <br>
-    <h4>Game Rules : 
-        <div class="game-rules">
-           
-        <ul>
-            <li>When you hit on the white stone you will lose.</li>
-            <li>When the green stone touches the top of the screen, you will lose.</li>
-        </ul>
-    </div>
+     
+        
 </div>
     <div id="entry">
         
@@ -44,14 +38,32 @@
 
     
     <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ1hM60pKBZAGYKyRLztQdjejOZ1e8zu-d7DuYgKz4FMchVi3laqj0Akz9zdNk_uE51ITVgqFwTSmd_/pubhtml?widget=true&amp;headers=false"></iframe>    <input type="button" id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" value="Start Game"> -->
+    <button id="instructions-button" class="btn btn-lg btn-danger btn-block" onclick="showInstructions()" >Show Instructions</button>
+    <div class="game-rules" id="game-rules-id">
+        <br>
+        <h4>
+        <ul>
+            <li>Tap the Gold button for bonus Score</li>
+            <li>When you tap on the white stone you will lose.</li>
+            <li>When the green stone touches the top of the screen, you will lose.</li>
+        </ul>
+        </h4>
+        <br>
+    </div>
+    
+
     <button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="startButton()" >Start Game</button>
     <button id="start-button" class="btn btn-lg btn-danger btn-block" onclick="window.location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vSFkjUAHxHS3rRzolc0K9xDG7f1EZBA2K317N_BMppYTnxeCCaGj7MzvVWJYU9GBRIJ7a9NjBWRN-vF/pubhtml?gid=0&single=true'" >Show Result</button>
-    <button id="theme-switch" class="btn btn-lg btn-primary btn-block" onclick="themeToggle()" >Change Theme</button>
+    <br>
+    <div class="btn-group" id="group-button" role="group">
+        <button type="button"  class="btn btn-primary"><img src="volume.png" alt="volume" id="volume-img"></button>
+        <button type="button" class="btn btn-light" onclick="themeToggle()" id="theme-button"> <center><b> Change Theme</b></center></button>
+    </div>
 </div>
 <h3 id="scoreDisplay"></h3>
 <br>
 <div id="retryGame">
-<img id="loseImage" class="loseOrWin" src="lose.jpg" alt="lose">
+<img id="loseImage" class="loseOrWin" src="giphy.gif" alt="lose">
 <button id="start-button" class="btn btn-lg btn-primary btn-block" onclick="window.location.href='index.html'" >Retry Game</button>
 <br>
 <form id="submit-form" class="form-signin" action="/" method="POST">
