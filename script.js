@@ -1,8 +1,8 @@
 document.getElementById("scoreForm").style.display= "none";
 var score = 0;
 var x;
-var whiteSpeed = 500;
-var greenSpeed = 467;
+var whiteSpeed = 300;
+var greenSpeed = 450;
 var goldSpeed = 5000;
 var intervalLoop;
 var intervalLoop2;
@@ -110,7 +110,7 @@ function buttonGreen(){
         // clearInterval(intervalLoop);
         clearInterval(intervalLoop2);
         whiteSpeed = 400;
-        greenSpeed = 450;
+        greenSpeed = 375;
         // intervalLoop = setInterval(Button, whiteSpeed);
         intervalLoop2 = setInterval(buttonGreen, greenSpeed);
     }
